@@ -474,31 +474,45 @@ nav a {
 /* Small devices (phones, less than 768px) */
 @media (max-width: 767.98px) {
   .main-container {
-    padding: 10px;
+    padding: 0;
+  }
+
+  main {
+    padding: 0 20px 0 20px;
   }
 
   header {
     flex-direction: column;
     align-items: center;
+    padding: 0;
+    margin-bottom: 30px;
   }
 
   .logo-booki {
     display: flex;
     justify-content: center;
+    margin-bottom: 20px;
+  }
+
+  nav {
+    width: 100%;
   }
 
   nav ul {
+    display: flex;
+    justify-content: space-evenly;
     margin: 0;
-    list-style-type: none;
-    border-bottom: 2px solid #f2f2f2;
-    border-width: 100%;
+    padding: 0;
   }
 
   nav li {
-    display: flex;
-    justify-content: space-between;
+    flex: 1;
+    text-align: center;
     border-top: none;
-    padding-bottom: 7px;
+    padding-bottom: 15px;
+    margin-left: 0;
+    border-bottom: 2px solid #f2f2f2;
+    border-width: 100%;
   }
 
   nav li:hover {

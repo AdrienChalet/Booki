@@ -186,7 +186,8 @@ nav a {
 /****** Filtres ****************************************************************************************/
 .filter-container {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
   width: 55%;
   margin-top: 12px;
 }
@@ -384,8 +385,15 @@ nav a {
   border-top-right-radius: 20px;
 }
 
-.activites-cards .card-title {
-  padding: 0 0 20px 20px;
+.card-title {
+  margin: 0;
+}
+
+.card-texte {
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+  height: 70px;
 }
 
 /****** Footer ****************************************************************************************/
@@ -413,16 +421,18 @@ nav a {
 /* Medium devices (tablets, less/equal than 1024px) */
 @media (max-width: 1024px) {
   .filter-container {
-    display: block;
     width: 100%;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .filters {
+    display: flex;
+    gap: 10px;
   }
 
   .filter-container p {
     margin-bottom: 18px;
-  }
-
-  .filter-btn {
-    margin-right: 7px;
   }
 
   .hebergements-and-populaires {
@@ -458,7 +468,6 @@ nav a {
 
   .activites-cards .card {
     width: 190.5px;
-    height: 270px;
   }
 
   .activites-cards img {
@@ -538,9 +547,44 @@ nav a {
     display: block;
   }
 
-  .search-container {
+  .location {
+    width: 50px;
+    height: 49px;
+  }
+
+  .search-input {
+    padding-right: 40px;
     width: 100%;
-    padding: 10px;
+  }
+
+  .search-icon {
+    width: 49px;
+    height: 49px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.3);
+    margin-left: -10px;
+  }
+
+  .search-icon i {
+    margin-top: -2px;
+    margin-left: -2px;
+  }
+
+  .filters {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 5px;
+    row-gap: 20px;
+  }
+
+  .filter-btn {
+    display: flex;
+    align-items: center;
+    width: 49%;
+    font-size: 14px;
+  }
+
+  .filter-btn i {
+    margin-top: -6px;
   }
 
   .hebergements-and-populaires {
@@ -553,6 +597,10 @@ nav a {
   }
 
   .hebergements-cards {
+    flex-direction: column;
+  }
+
+  .activites-cards {
     flex-direction: column;
   }
 
